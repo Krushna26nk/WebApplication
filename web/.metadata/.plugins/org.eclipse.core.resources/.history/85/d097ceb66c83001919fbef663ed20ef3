@@ -1,0 +1,60 @@
+package com.WebApplication;
+
+import java.io.IOException;
+
+import java.sql.*;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Registration
+ */
+@WebServlet("/Registration")
+public class Registration extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String name = request.getParameter("uname");
+		String lname = request.getParameter("lname");
+		String addr = request.getParameter("address");
+		String contact = request.getParameter("contact");
+		String email = request.getParameter("email");
+		
+		RequestDispatcher rd = request.getRequestDispatcher("");
+		rd.forward(request, response);
+		
+		
+
+	}
+	public static void createConnection(){
+		
+		String str = "CREATE TABLE data"
+				+ "(Name VARCHAR[20] NOT NULL,"
+				+ "LastName VARCHAR[10] NOT NULL,"
+				+ "Address VARCHAR[20] NOT NULL,"
+				+ "Contact INT[10] NOT NULL,"
+				+ "Email VARCHAR[20] NOT NULL";
+		
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+		
+			Connection conn = DriverManager.getConnection("jdbc:mysql://3306/registerData","root","root");
+			
+			Statement stmnt = conn.createStatement();
+			
+			ResultSet rs = stmnt.executeQuery(str);
+			
+			System.out.println("table created succesfully..!");
+			
+		}
+		catch(Exception e){
+			System.out.println("error :-"+e);
+		}
+	}
+
+}

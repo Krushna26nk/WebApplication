@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Style.css">
+<title>Insert title here</title>
+</head>
+<body style="background-color:#EFE2BA;">
+<div class="regDiv">
+	<h2> R E G I S T E R - H E R E </h2>
+
+	<form class="form" action="Registration" style="align:middle;">
+				  Name - 
+				  <input type="text" id="firstName" name="uname"> 
+				  Last Name - </td>
+				  <input type="text" id="lastName" name="lname"> 
+				  Address - </td>
+				  <input type="text" id="userAddress" name="address"> 
+				  Contact - </td>
+				  <input type="number" id="contactNo" name="contact"> 
+				  Email - </td>
+				  <input type="email" id="emailId" name="email"> 
+				  Password - </td>
+				  <input type="password" id="userPassword" name="pass"> 
+			
+		
+		 <input type="submit" value="S U B M I T"> 
+	</form>
+		<p> Already Register..?  </p>			
+		<button type="button"><a href="Login.jsp"> Log In </a></button>	
+		
+</div>
+	
+
+<script type="text/javascript">
+	var userFName = document.getElementById("firstName");
+	var userLName = document.getElementById("lastName");
+	var userAddr = document.getElementById("userAddress");
+	var contct = document.getElementById("contactNo");
+	var emailId = document.getElementById("emailId");
+	var userPass = document.getElementById("userPassword");
+</script>
+
+
+</body>
+</html>

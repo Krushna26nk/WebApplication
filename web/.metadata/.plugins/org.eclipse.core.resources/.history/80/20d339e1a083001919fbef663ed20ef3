@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+.regDiv{
+	position:absolute;
+	left:38%;	
+}
+.form{
+	background-color: #F13C20;
+	position:relative;
+	margin-top:30%;
+	width:390px;
+	height:350px;
+	text-align:center;
+	
+}
+input{
+	width:50%;
+}

@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	outline:none;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	background-image: url("blur.jpg");
+}
+
+.regDiv{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	width:100%;
+	padding:0px 20px;
+	
+}
+.formDiv{
+	max-width:550px;
+	margin:0 auto;
+}
